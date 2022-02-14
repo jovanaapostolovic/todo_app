@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
 const NewTodoForm = ({addTodo}) => {
-    const[todo, setTodo] = useState("");
+    const[task, setTask] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTodo(todo);
-        setTodo("");
+        addTodo(task);
+        setTask("");
     };
 
     return ( 
@@ -14,7 +14,7 @@ const NewTodoForm = ({addTodo}) => {
             <lable style={{marginRight: 5}}>
                 Todo:
             </lable>
-            <input type="text" onChange={(e) => setTodo(e.target.value)}/>
+            <input type="text" onChange={(e) => setTask(e.target.value)}/>
             <input style={{marginLeft: 10}} type="submit" value="Add"/>
         </form>
     );
